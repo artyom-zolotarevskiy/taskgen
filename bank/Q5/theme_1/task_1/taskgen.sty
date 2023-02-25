@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{taskgen}[2023/02/24 Taskgen package v0.3.2]
+\ProvidesPackage{taskgen}[2023/02/25 Taskgen package v0.3.3]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[russian]{babel}
 \usepackage{graphicx}
@@ -51,6 +51,7 @@
 \setcounter{taskcounter}{1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{problem}[1][]{%
+  \leavevmode
   \ifbool{use_template}%
   {
     \ifnum\thetaskcounter=1
@@ -70,10 +71,11 @@
 %\newcommand{\setplaceholders}{}
 \newenvironment{solution}%
 {%
+  \leavevmode
   \setcounter{answercounter}{1}
   \ifbool{use_template}%
   {
-  	\textbf{Решение: }  
+  	\textbf{Решение: } 
   }%
   {}%
 }%
@@ -86,7 +88,7 @@
     \fi  
   }%
   {}%
-  \\
+  \leavevmode\\
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

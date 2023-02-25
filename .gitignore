@@ -6,11 +6,7 @@ bank/**/substitutions
 bank-private/
 results/
 templates/special
-taskgen/__pycache__/
 tmp/
-build/
-dist/
-taskgen.egg-info/
 *.log
 *.aux
 *.dvi
@@ -20,3 +16,4 @@ taskgen.egg-info/
 *.depytx
 *.synctex.gz
 *.pytxcode
+texput.log

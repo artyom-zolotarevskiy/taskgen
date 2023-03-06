@@ -171,7 +171,10 @@
                    td.gather {text-align:center; }
                    table.gather {width:100%;}
                    div.gather-star {text-align:center;}
-                   /* end css.sty */`;
+                   /* end css.sty */
+                   .que.formulas .formulation .formulaspart {display: inline;}
+                   .answer {display: inline;}
+                   .answer p.noindent {display: inline;}`;
                   document.head.appendChild(style);
               </script>
               <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

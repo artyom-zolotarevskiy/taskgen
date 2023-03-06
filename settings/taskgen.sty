@@ -28,8 +28,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\subs}[1]{{\color{orange}#1}}
 % параметры:
-% #1 - ответ
-\newcommand{\answer}[1]%
+% #1 - ответ  
+\newcommand{\answerfield}[1]%
 {%
    \ifthenelse{\isundefined{\setplaceholders}}%
    {#1}%
@@ -42,8 +42,14 @@
 \newbool{use_template}
 \newcounter{biletnumber}
 \setcounter{biletnumber}{1}
+\newbool{use_bilet_number}
+\booltrue{use_bilet_number}
 \newcommand{\header}{
-  \centerline{\textbf{Билет № \thebiletnumber}}
+  \ifbool{use_bilet_number}%
+  {
+  	\centerline{\textbf{Билет № \thebiletnumber}}
+  }%
+  {}
 }
 \newcommand{\specialcell}[2][l]{%
   \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
@@ -72,10 +78,23 @@
 \newenvironment{solution}%
 {%
   \leavevmode
-  \setcounter{answercounter}{1}
   \ifbool{use_template}%
   {
   	\textbf{Решение: } 
+  }%
+  {}%
+}%
+{%
+  \leavevmode\\
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{answer}%
+{%
+  \leavevmode
+  \setcounter{answercounter}{1}
+  \ifbool{use_template}%
+  {
+  	\textbf{Ответ: } 
   }%
   {}%
 }%
@@ -93,6 +112,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \DeclareOption{use_template}{\booltrue{use_template}}
+\DeclareOption{not_use_bilet_number}{\boolfalse{use_bilet_number}}
 \DeclareOption*{\PackageWarning{taskgen}{Unknown ‘\CurrentOption’}}
 \ProcessOptions\relax
 

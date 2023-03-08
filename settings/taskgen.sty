@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{taskgen}[2023/02/25 Taskgen package v0.3.3]
+\ProvidesPackage{taskgen}[2023/03/07 Taskgen package v0.3.6]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[russian]{babel}
 \usepackage{graphicx}
@@ -28,11 +28,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\subs}[1]{{\color{orange}#1}}
 % параметры:
-% #1 - ответ
-\newcommand{\answer}[1]%
+% #1 - ответ  
+\newcommand{\answerfield}[1]%
 {%
    \ifthenelse{\isundefined{\setplaceholders}}%
-   {#1}%
+   {}%
    {
        \{\#\theanswercounter\}
    }%
@@ -40,10 +40,12 @@
 }%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newbool{use_template}
-\newcounter{biletnumber}
-\setcounter{biletnumber}{1}
-\newcommand{\header}{
-  \centerline{\textbf{Билет № \thebiletnumber}}
+\booltrue{use_template}
+\newcounter{answercounter}
+\newcommand{\printbilettitle}[1]{
+	\centerline{\textbf{#1}}
+	\setcounter{taskcounter}{1}
+	\setcounter{answercounter}{1}
 }
 \newcommand{\specialcell}[2][l]{%
   \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
@@ -51,28 +53,23 @@
 \setcounter{taskcounter}{1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{problem}[1][]{%
-  \leavevmode
+  \leavevmode%
   \ifbool{use_template}%
   {
-    \ifnum\thetaskcounter=1
-	  \header
-    \fi
-    \textbf{\thetaskcounter}. (10)  
+  	\def\temp{#1}\ifx\temp\empty
+  		\textbf{Задача \thetaskcounter: } %
+  	\else
+  		\textbf{Задача \thetaskcounter{} ("#1"): } %
+  	\fi
   }%
   {}%
 }{%
   \stepcounter{taskcounter}
 }
-
-\newcounter{answercounter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% if you want to see the solution
-%\newcommand{\hidesolution}{show them}
-%\newcommand{\setplaceholders}{}
 \newenvironment{solution}%
 {%
-  \leavevmode
-  \setcounter{answercounter}{1}
+  \leavevmode%
   \ifbool{use_template}%
   {
   	\textbf{Решение: } 
@@ -80,19 +77,24 @@
   {}%
 }%
 {%
+  \leavevmode\\
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{answer}%
+{%
+  \leavevmode%
   \ifbool{use_template}%
   {
-    \ifnum\thetaskcounter=7
-  	  \stepcounter{biletnumber}
-	  \setcounter{taskcounter}{1}
-    \fi  
+  	\textbf{Ответ: } 
   }%
   {}%
+}%
+{%
   \leavevmode\\
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\DeclareOption{use_template}{\booltrue{use_template}}
+\DeclareOption{not_use_template}{\boolfalse{use_template}}
 \DeclareOption*{\PackageWarning{taskgen}{Unknown ‘\CurrentOption’}}
 \ProcessOptions\relax
 

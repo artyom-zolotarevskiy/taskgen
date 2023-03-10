@@ -32,7 +32,7 @@
 \newcommand{\answerfield}[1]%
 {%
    \ifthenelse{\isundefined{\setplaceholders}}%
-   {}%
+   {#1}%
    {
        \{\#\theanswercounter\}
    }%

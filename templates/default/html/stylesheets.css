@@ -174,15 +174,15 @@ body {
   padding: 1cm;
   margin: 0;
 }
-html, body {
-  width: 210mm;
+html {
+  max-width: 210mm;
 }
 @page {
   size: A4;
   margin: 0;
 }
 @media print {
-  html, body {
-    width: 210mm;
+  html {
+    max-width: 210mm;
   }
 }

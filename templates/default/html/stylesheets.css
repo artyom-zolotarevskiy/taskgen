@@ -161,7 +161,11 @@ div.gather-star {text-align:center;}
 /* end css.sty */
 .problem > p {
     display: inline;
+    text-align: justify;
 }
 .problem > p ~ p {
     display: inherit;
+}
+body {
+  padding: 1cm;
 }

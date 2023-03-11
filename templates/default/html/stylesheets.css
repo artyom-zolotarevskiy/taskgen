@@ -175,6 +175,7 @@ body {
 }
 html, body {
   width: 210mm;
+  margin: 0;
 }
 @page {
   size: A4;

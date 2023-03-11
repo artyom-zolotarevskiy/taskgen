@@ -53,7 +53,7 @@
 \setcounter{taskcounter}{1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{problem}[1][]{%
-  \leavevmode%
+  %\leavevmode%
   \ifbool{use_template}%
   {
   	\def\temp{#1}\ifx\temp\empty
@@ -65,11 +65,12 @@
   {}%
 }{%
   \stepcounter{taskcounter}
+  \par
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{solution}%
 {%
-  \leavevmode%
+  %\leavevmode%
   \ifbool{use_template}%
   {
   	\textbf{Решение: } 
@@ -77,12 +78,13 @@
   {}%
 }%
 {%
-  \leavevmode\\
+  %\leavevmode
+  \par
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{answer}%
 {%
-  \leavevmode%
+  %\leavevmode%
   \ifbool{use_template}%
   {
   	\textbf{Ответ: } 
@@ -90,7 +92,8 @@
   {}%
 }%
 {%
-  \leavevmode\\
+  %\leavevmode\\
+  \par
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

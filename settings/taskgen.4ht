@@ -1,0 +1,55 @@
+\NewConfigure{problem}{2}
+
+\let\ProblemOrig\problem
+\let\endProblemOrig\endproblem
+\renewenvironment{problem}
+  {%
+    \a:problem
+    \ProblemOrig
+  }
+  {%
+    \endProblemOrig
+    \b:problem
+  }%
+
+\Configure{problem}
+  {\ifvmode\IgnorePar\fi\EndP\HCode{<div class="problem">}\par}
+  {\ifvmode\IgnorePar\fi\EndP\HCode{</div>}\par}
+
+
+\NewConfigure{solution}{2}
+
+\let\SolutionOrig\solution
+\let\endSolutionOrig\endsolution
+\renewenvironment{solution}
+  {%
+    \a:solution
+    \SolutionOrig
+  }
+  {%
+    \endSolutionOrig
+    \b:solution
+  }%
+
+\Configure{solution}
+  {\ifvmode\IgnorePar\fi\EndP\HCode{<div class="solution">}\par}
+  {\ifvmode\IgnorePar\fi\EndP\HCode{</div>}\par}
+
+
+\NewConfigure{answer}{2}
+
+\let\AnswerOrig\answer
+\let\endAnswerOrig\endanswer
+\renewenvironment{answer}
+  {%
+    \a:answer
+    \AnswerOrig
+  }
+  {%
+    \endAnswerOrig
+    \b:answer
+  }%
+
+\Configure{answer}
+  {\ifvmode\IgnorePar\fi\EndP\HCode{<div class="answer">}\par}
+  {\ifvmode\IgnorePar\fi\EndP\HCode{</div>}\par}

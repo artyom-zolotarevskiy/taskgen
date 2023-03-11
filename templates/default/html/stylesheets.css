@@ -159,11 +159,28 @@ td.gather {text-align:center; }
 table.gather {width:100%;}
 div.gather-star {text-align:center;}
 /* end css.sty */
-.problem > p {
-    display: inline;
+div.typeset {
+    hyphens: auto;
+}
+div.typeset p {
     text-align: justify;
 }
+.problem > p {
+    display: inline;
+}
 .problem > p ~ p {
+    display: inherit;
+}
+.solution > p {
+    display: inline;
+}
+.solution > p ~ p {
+    display: inherit;
+}
+.answer > p {
+    display: inline;
+}
+.answer > p ~ p {
     display: inherit;
 }
 html {
@@ -185,4 +202,7 @@ html {
   html {
     max-width: 210mm;
   }
+}
+div.center p {
+  text-align: center !important;
 }

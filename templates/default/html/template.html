@@ -36,6 +36,24 @@
   <style type='text/css'>
     .MathJax_MathML {text-indent: 0;}
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hyphenopoly/5.0.0/Hyphenopoly_Loader.min.js"></script>
+  <script>
+    Hyphenopoly.config({
+        require: {
+            "ru": "превысокомногорассмотрительствующий",
+            "en-us": "Supercalifragilisticexpialidocious"
+        },
+        paths: {
+            patterndir: "https://cdnjs.cloudflare.com/ajax/libs/hyphenopoly/5.0.0/patterns/",
+            maindir: "https://cdnjs.cloudflare.com/ajax/libs/hyphenopoly/5.0.0/"
+        },
+        setup: {
+            selectors: {
+                "div.typeset": {}
+            }
+        }
+    });
+  </script>
 </head>
 <body>
   <p style='display:none;' class="typeset"> \( ${mathjaxcommands}

@@ -120,3 +120,19 @@ window.Hyphenopoly = {}, ((e, t, s, n) => {
         })()
     }
 })(window, document, Hyphenopoly, Object);
+
+Hyphenopoly.config({
+    require: {
+        "ru": "превысокомногорассмотрительствующий",
+        "en-us": "Supercalifragilisticexpialidocious"
+    },
+    paths: {
+        patterndir: "https://cdnjs.cloudflare.com/ajax/libs/hyphenopoly/5.0.0/patterns/",
+        maindir: "https://cdnjs.cloudflare.com/ajax/libs/hyphenopoly/5.0.0/"
+    },
+    setup: {
+        selectors: {
+            "div.typeset": {}
+        }
+    }
+});

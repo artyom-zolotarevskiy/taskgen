@@ -3,7 +3,7 @@ Task Generator Control Panel
 
 Панель управления генератором банка задач на базе MiKTeX и Jupyter Notebook.
 
-Для работы необходимо установить ядро: ``pip install taskgen``
+Для работы необходимо установить ядро: ``python -m pip install taskgen --upgrade --user``
 
 По всем вопросам: artyom@zolotarevskiy.ru.
 

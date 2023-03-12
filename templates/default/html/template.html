@@ -5,54 +5,12 @@
   <meta charset='UTF-8' />
   <meta content='TaskGenerator' name='generator' />
   <link href='stylesheets.css' rel='stylesheet' type='text/css' />
-  <script type='text/javascript'>
-    window.mathjax_loaded = false;
-    window.MathJax = {
-      startup: {
-        typeset: false,
-        pageReady() {
-          var typeset_blocks = document.getElementsByClassName("typeset");
-          for (var i = 0; i < typeset_blocks.length; i++){
-             MathJax.typeset([typeset_blocks[i]]);
-             MathJax.startup.input[0].parseOptions.tags.counter = 0;
-             MathJax.startup.input[0].parseOptions.tags.allCounter = 0;
-             MathJax.startup.input[0].parseOptions.tags.allLabels = {};
-          }
-        },
-        ready: () => {
-          MathJax.startup.defaultReady();
-          MathJax.startup.promise.then(() => {
-            console.log('MathJax initial typesetting complete');
-            window.mathjax_loaded = true;
-          });
-        }
-      },
-      tex: {
-        tags: 'ams'
-      }
-    };
-  </script>
-  <script id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>
+  <script src="mathjax_config.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js'></script>
   <style type='text/css'>
     .MathJax_MathML {text-indent: 0;}
   </style>
-  <script src="./Hyphenopoly_Loader.js"></script>
-  <script>
-    Hyphenopoly.config({
-        require: {
-            "ru": "превысокомногорассмотрительствующий",
-            "en-us": "Supercalifragilisticexpialidocious"
-        },
-        paths: {
-            patterndir: "https://cdnjs.cloudflare.com/ajax/libs/hyphenopoly/5.0.0/patterns/",
-            maindir: "https://cdnjs.cloudflare.com/ajax/libs/hyphenopoly/5.0.0/"
-        },
-        setup: {
-            selectors: {
-                "div.typeset": {}
-            }
-        }
-    });
+  <script src="hyphenopoly_loader.js">
   </script>
 </head>
 <body>

@@ -1,4 +1,4 @@
- /* start css.sty */
+/* start css.sty */
 .larm-0900{font-size:81%;}
 .labx-1000{font-size:90%;font-weight: bold;}
 .labx-1000{font-weight: bold;}
@@ -160,49 +160,48 @@ table.gather {width:100%;}
 div.gather-star {text-align:center;}
 /* end css.sty */
 div.typeset {
-    hyphens: auto;
+   hyphens: auto;
 }
 div.typeset p {
-    text-align: justify;
+   text-align: justify;
 }
 .problem > p {
-    display: inline;
+   display: inline;
 }
 .problem > p ~ p {
-    display: inherit;
+   display: inherit;
 }
 .solution > p {
-    display: inline;
+   display: inline;
 }
 .solution > p ~ p {
-    display: inherit;
+   display: inherit;
 }
 .answer > p {
-    display: inline;
+   display: inline;
 }
 .answer > p ~ p {
-    display: inherit;
+   display: inherit;
 }
 html {
-  padding: 0;
-  margin: 0 auto;
+ padding: 0;
+ margin: 0 auto;
 }
 body {
-  padding: 1cm;
-  margin: 0;
-}
-html {
-  max-width: 210mm;
+ padding: 1cm;
+ margin: 0;
 }
 @page {
-  size: A4;
-  margin: 0;
+ size: A4;
+ padding: 0;
+ margin: 0;
 }
 @media print {
-  html {
-    max-width: 210mm;
-  }
+ html, body {
+   padding: 0;
+   margin: 0;
+ }
 }
 div.center p {
-  text-align: center !important;
+ text-align: center !important;
 }

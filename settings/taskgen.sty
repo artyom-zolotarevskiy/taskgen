@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{taskgen}[2023/03/07 Taskgen package v0.3.6]
+\ProvidesPackage{taskgen}[2023/03/12 Taskgen package v0.3.7.1]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[russian]{babel}
 \usepackage{graphicx}
@@ -19,16 +19,18 @@
 \setlength{\parindent}{0pt}
 \usepackage{etoolbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\E}{\text{E}}
-\newcommand{\D}{\text{V}\!\text{ar}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\D}{\mathbb{V}\!ar}
 \newcommand{\N}{\mathbb{N}}
 \DeclareMathOperator{\sign}{sign}
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \newcommand{\myfrac}[2]{\genfrac{}{}{1.1pt}{}{#1}{#2}}
+\newcommand{\ex}{e}
+\newcommand{\PP}{\mathbb{P\,}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\subs}[1]{{\color{orange}#1}}
 % параметры:
-% #1 - ответ  
+% #1 - ответ
 \newcommand{\answerfield}[1]%
 {%
    \ifthenelse{\isundefined{\setplaceholders}}%
@@ -53,7 +55,6 @@
 \setcounter{taskcounter}{1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{problem}[1][]{%
-  %\leavevmode%
   \ifbool{use_template}%
   {
   	\def\temp{#1}\ifx\temp\empty
@@ -72,7 +73,7 @@
 {%
   \ifbool{use_template}%
   {
-  	\textbf{Решение: } 
+  	\textbf{Решение: }
   }%
   {}%
 }%
@@ -84,7 +85,7 @@
 {%
   \ifbool{use_template}%
   {
-  	\textbf{Ответ: } 
+  	\textbf{Ответ: }
   }%
   {}%
 }%

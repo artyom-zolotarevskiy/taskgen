@@ -10,7 +10,11 @@
   <style type='text/css'>
     .MathJax_MathML {text-indent: 0;}
   </style>
-  <script src="hyphenopoly_loader.js">
+  <script src="hyphenopoly_loader.js"></script>
+  <script>
+    for (el of document.querySelectorAll("figure.figure img[src]")) {
+      el.src = el.src + "?" + (new Date()).getTime();
+    }
   </script>
 </head>
 <body>

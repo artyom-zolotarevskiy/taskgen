@@ -205,3 +205,18 @@ body {
 div.center p {
  text-align: center !important;
 }
+figure img {
+  margin: auto !important;
+  max-width: 100%;
+  height: auto;
+}
+figure p {
+  text-align: center !important;
+}
+figure.figure figcaption.caption {
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+}

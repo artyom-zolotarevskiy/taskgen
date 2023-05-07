@@ -39,3 +39,24 @@ Copyright (c) 2023 Артём Золотаревский.
 -------
 Отдельная благодарность научному руководителю, Павлу Евгеньевичу Рябову,
 за постановку задачи и постоянное внимание к работе.
+
+
+Научные публикации и конференции
+-------
+
+ПАРАМЕТРИЗАЦИЯ ЗАДАЧ ПО ДИСЦИПЛИНЕ «ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ
+СТАТИСТИКА» НА ПЛАТФОРМЕ MOODLE С ИСПОЛЬЗОВАНИЕМ ИНСТРУМЕНТАРИЯ JUPYTER
+NOTEBOOK - 7 мая 2023.<br>
+Тезисы доклада - https://zolotarevskiy.ru/files/conferences/taskgen/2023/05/07/abstract.pdf<br>
+Презентация - https://zolotarevskiy.ru/files/conferences/taskgen/2023/05/07/presentation.pdf<br>
+Примерный текст доклада - https://zolotarevskiy.ru/files/conferences/taskgen/2023/05/07/paper.pdf<br>
+Видео запись доклада - https://zolotarevskiy.ru/files/conferences/taskgen/2023/05/07/video.mp4<br>
+
+ОБ ОДНОЙ ПРОБЛЕМЕ ПЛАГИНА «QTYPE_FORMULAS» НА ПЛАТФОРМЕ «MOODLE» - 4 апреля 2023 г.<br>
+Тезисы доклада - https://zolotarevskiy.ru/files/conferences/taskgen/2023/04/12/abstract.pdf
+
+PYTHONTEX КАК ОСНОВА АВТОМАТИЧЕСКОЙ СИСТЕМЫ ГЕНЕРАЦИИ БАНКА ЗАДАЧ - 9 июня 2022 г.<br>
+Обзорная статья по используемым технологиям и возможностям первой версии генератора.<br>
+Текст статьи - https://zolotarevskiy.ru/files/conferences/taskgen/2022/paper.pdf<br>
+Презентация - https://zolotarevskiy.ru/files/conferences/taskgen/2022/presentation.pdf<br>
+Сертификат участника - https://zolotarevskiy.ru/files/conferences/taskgen/2022/certificate_of_the_participant.pdf
